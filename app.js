@@ -172,6 +172,7 @@
                 submitBtn.disabled = true;
 
                 try {
+                    console.log("--- Fetching from Vercel Backend ---");
                     const response = await fetch('https://abdul-ghani-portfolio.vercel.app/api/contact', {
                         method: 'POST',
                         headers: {
