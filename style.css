@@ -654,6 +654,66 @@
             font-size: 0.9rem;
         }
 
+        /* Toast Notifications */
+        .toast-notification {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            background: var(--dark-card);
+            color: var(--text-primary);
+            padding: 16px 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border-left: 4px solid var(--accent-cyan);
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 10000;
+            max-width: 350px;
+        }
+
+        .toast-notification.show {
+            transform: translateX(0);
+        }
+
+        .toast-notification.success {
+            border-left-color: #2ecc71;
+        }
+
+        .toast-notification.error {
+            border-left-color: #e74c3c;
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+        }
+
+        .success .toast-icon { color: #2ecc71; }
+        .error .toast-icon { color: #e74c3c; }
+
+        .toast-content h4 {
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .toast-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .toast-close {
+            margin-left: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .toast-close:hover {
+            opacity: 1;
+        }
+
         /* Animations */
         @keyframes fadeUp {
             from {

@@ -157,10 +157,79 @@
         // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                // Here you would normally handle form submission to a server
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                
+                submitBtn.innerText = "Sending...";
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch('http://localhost:5000/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, email, subject, message })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (response.ok) {
+                        showNotification('Success!', 'Thank you for your message! I will get back to you soon.', 'success');
+                        this.reset();
+                    } else {
+                        showNotification('Error', data.message || 'Failed to send message. Please try again.', 'error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showNotification('Connection Error', 'An error occurred. Make sure the backend server is running.', 'error');
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
             });
+        }
+
+        // Professional Notification System
+        function showNotification(title, message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast-notification ${type}`;
+            
+            const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+            
+            toast.innerHTML = `
+                <div class="toast-icon"><i class="fas ${icon}"></i></div>
+                <div class="toast-content">
+                    <h4>${title}</h4>
+                    <p>${message}</p>
+                </div>
+                <div class="toast-close"><i class="fas fa-times"></i></div>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => toast.classList.add('show'), 100);
+            
+            // Auto-remove after 5 seconds
+            const timeout = setTimeout(() => hideToast(toast), 5000);
+            
+            // Manual close
+            toast.querySelector('.toast-close').addEventListener('click', () => {
+                clearTimeout(timeout);
+                hideToast(toast);
+            });
+        }
+
+        function hideToast(toast) {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 400);
         }
