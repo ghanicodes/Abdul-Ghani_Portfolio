@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('adminLoginForm');
     const logoutBtn = document.getElementById('logoutBtn');
     
-    const apiBaseUrl = 'http://localhost:5000/api';
+    const apiBaseUrl = 'https://abdul-ghani-portfolio.vercel.app/api';
 
     // Check if already logged in
     const token = localStorage.getItem('adminToken');
