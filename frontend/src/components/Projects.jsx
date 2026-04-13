@@ -24,7 +24,7 @@ const Projects = () => {
       img: '/images/bootcamp-tracker.png',
       desc: 'A scalable full-stack SPA for student progress tracking. Includes secure JWT authentication, role-based dashboards (Admin, Teacher, Student), and modules for assignments and attendance.',
       tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-      live: '#',
+      live: 'https://boot-camp-tracker.vercel.app',
       github: 'https://github.com/ghanicodes'
     },
     {
