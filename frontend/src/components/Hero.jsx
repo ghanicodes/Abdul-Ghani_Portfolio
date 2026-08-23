@@ -54,8 +54,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="experience-badge">
-            <h3>2+</h3>
-            <p>Years of<br />Experience</p>
+            <h3>15+</h3>
+            <p>Projects<br />Delivered</p>
           </div>
         </div>
       </div>
