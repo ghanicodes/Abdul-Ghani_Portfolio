@@ -15,23 +15,23 @@ const Education = () => {
 
   const items = [
     {
-      date: '2021 - 2023',
-      title: 'Web & Mobile App Development',
-      institution: 'Saylani Mass IT Training',
-      desc: 'Completed professional training in web and mobile app development.'
-    },
-    {
-      date: '2019 - 2021',
-      title: 'Intermediate (Pre-Engineering)',
-      institution: 'Punjab Board',
-      desc: 'Core intermediate education with a focus on pre-engineering.'
-    },
-    {
-      date: '2017 - 2019',
-      title: 'Matriculation (Science)',
-      institution: 'Punjab Board',
-      desc: 'Completed matriculation with distinction in science subjects.'
-    }
+  date: '2023 - 2024',
+  title: 'Web & Mobile App Development',
+  institution: 'Saylani Mass IT Training (SMIT)',
+  desc: 'Professional training in web and mobile app development, covering modern technologies and practical project development.'
+},
+{
+  date: '2021 - 2023',
+  title: 'Intermediate (Computer Science)',
+  institution: 'Govt. Superior College',
+  desc: 'Completed intermediate education with a focus on computer science and foundational technical concepts.'
+},
+{
+  date: '2021',
+  title: 'Matriculation (Science)',
+  institution: 'Pacific Grammar School',
+  desc: 'Completed secondary education with a focus on science subjects.'
+}
   ];
 
   return (

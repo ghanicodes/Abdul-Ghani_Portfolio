@@ -20,8 +20,9 @@ const Skills = () => {
       skills: [
         { name: 'HTML5', dot: 'orange' },
         { name: 'CSS3', dot: 'blue' },
-        { name: 'JavaScript', dot: 'yellow' },
+        { name: 'Bootstrap', dot: 'blue' },
         { name: 'React', dot: 'cyan' },
+        { name: 'Next.js', dot: 'white' }
       ]
     },
     {
@@ -30,8 +31,10 @@ const Skills = () => {
       skills: [
         { name: 'Node.js', dot: 'green' },
         { name: 'Express.js', dot: 'white' },
+        { name: 'JavaScript(ES6+)', dot: 'yellow' },
         { name: 'REST APIs', dot: 'blue' },
         { name: 'JWT', dot: 'purple' },
+
       ]
     },
     {
@@ -40,7 +43,7 @@ const Skills = () => {
       skills: [
         { name: 'MongoDB', dot: 'green' },
         { name: 'Mongoose', dot: 'red' },
-        { name: 'Firebase', dot: 'yellow' },
+        { name: 'Supabase', dot: 'green' },
       ]
     },
     {
@@ -58,8 +61,8 @@ const Skills = () => {
       skills: [
         { name: 'Git', dot: 'orange' },
         { name: 'GitHub', dot: 'white' },
-        { name: 'VS Code', dot: 'blue' },
         { name: 'Postman', dot: 'orange' },
+        { name: 'Vercel', dot: 'white' },
         { name: 'Figma', dot: 'pink' },
       ]
     }

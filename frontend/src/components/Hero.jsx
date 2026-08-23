@@ -11,8 +11,7 @@ const Hero = () => {
             <span className="highlight">Full Stack Developer.</span>
           </h1>
           <p className="hero-description">
-            I build modern, high-performance web experiences with clean code,
-            thoughtful UI and scalable technologies.
+            I build scalable backend systems, full-stack web applications, and customized e-commerce solutions with clean code. Expert in the MERN Stack, RESTful APIs, and responsive design.
           </p>
           <div className="hero-tech">
             <span>MERN Stack</span>
@@ -42,7 +41,7 @@ const Hero = () => {
             <div className="code-body">
               <span className="code-keyword">const</span> <span className="code-const">developer</span> = {'{'}<br />
               &nbsp;&nbsp;<span className="code-property">name:</span> <span className="code-string">'Abdul Ghani'</span>,<br />
-              &nbsp;&nbsp;<span className="code-property">role:</span> <span className="code-string">'Full Stack Developer'</span>,<br />
+              &nbsp;&nbsp;<span className="code-property">role:</span> <span className="code-string">'MERN Stack & Shopify Developer'</span>,<br />
               &nbsp;&nbsp;<span className="code-property">skills:</span> [<span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'MongoDB'</span>],<br />
               &nbsp;&nbsp;<span className="code-property">passion:</span> <span className="code-string">'Building scalable web solutions'</span>,<br />
               &nbsp;&nbsp;<span className="code-property">focus:</span> <span className="code-string">'Clean code, performance, UX'</span><br />

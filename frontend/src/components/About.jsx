@@ -25,9 +25,12 @@ const About = () => {
           <div className="about-text">
             <h2 className="section-title">About Me</h2>
             <p>
-              I'm a passionate Full Stack Developer with a strong foundation in building scalable
-              web applications using the MERN stack and modern technologies. I enjoy turning
-              ideas into real-world products with clean code and great user experiences.
+              I am a dedicated MERN Stack and Shopify Developer with hands-on experience
+               in building secure, efficient, and maintainable server-side solutions. 
+               I specialize in developing robust web applications using MongoDB, Express.js,
+               React.js, and Node.js.From designing structured databases to optimizing system
+              performance and integrating third-party APIs, I follow industry best practices 
+              to turn complex ideas into high-quality digital products.
             </p>
             <p>
               I'm constantly learning, improving and exploring new tech to build solutions

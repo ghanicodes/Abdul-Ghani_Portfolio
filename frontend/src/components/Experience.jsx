@@ -15,33 +15,35 @@ const Experience = () => {
 
   const items = [
     {
-      date: '2024 - Present',
-      role: 'Full Stack Developer',
-      company: 'TechCurve Solutions',
+      date: 'April 2026 – Present',
+      role: 'MERN Stack & Shopify Developer',
+      company: 'TechCure',
       desc: [
-        'Developing creative web applications using MERN stack and modern tools.',
-        'Building RESTful APIs, integrating third-party services and payment gateways.',
-        'Optimizing application performance and improving user experience.',
+        'Develop full-stack web applications using the MERN Stack (MongoDB, Express.js, React.js, Node.js).',
+        'Build RESTful APIs and customize Shopify stores, themes, and features.',
+        'Collaborate with cross-functional teams to deliver production-ready solutions.',
+        'Optimize performance while following clean code, Git workflows, and best practices.'
       ]
     },
+    // {
+    //   date: '2018 - 2024',
+    //   role: 'Frontend Developer',
+    //   company: 'TechCurve Solutions',
+    //   desc: [
+    //     'Built responsive and interactive user interfaces using React and Tailwind CSS.',
+    //     'Collaborated with backend teams to integrate APIs and manage client-side logic.',
+    //     'Enhanced application usability and performance across devices.',
+    //   ]
+    // },
     {
-      date: '2018 - 2024',
-      role: 'Frontend Developer',
-      company: 'TechCurve Solutions',
+      date: 'Feb 2026 – Apr 2026',
+      role: 'Backend Developer Intern',
+      company: 'Saylani Mass IT Training (SMIT)',
       desc: [
-        'Built responsive and interactive user interfaces using React and Tailwind CSS.',
-        'Collaborated with backend teams to integrate APIs and manage client-side logic.',
-        'Enhanced application usability and performance across devices.',
-      ]
-    },
-    {
-      date: '2023',
-      role: 'MERN Stack Developer Intern',
-      company: 'TechCurve Solutions',
-      desc: [
-        'Worked on real-world projects using MongoDB, Express.js, React and Node.js.',
-        'Implemented authentication, CRUD operations and API integrations.',
-        'Gained hands-on experience in full-stack development and best practices.',
+        'Developed a real-world Bootcamp Tracker LMS with scalable backend architecture.',
+        'Built RESTful APIs with authentication and role-based authorization (Admin, Teacher, Student).',
+        'Developed core modules including attendance, assignments, and bootcamp management.',
+        'Designed MongoDB databases and integrated APIs with frontend applications following best practices.',
       ]
     }
   ];
