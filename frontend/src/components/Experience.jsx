@@ -6,47 +6,68 @@ const Experience = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
       { threshold: 0.1 }
     );
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  const timelineItems = [
+  const items = [
     {
-      date: '2026 - Present',
-      title: 'Backend Developer Intern',
-      desc: 'Building scalable REST APIs, designing working database structures with MongoDB, and actively debugging and optimizing backend logic for robust application performance.'
+      date: '2024 - Present',
+      role: 'Full Stack Developer',
+      company: 'TechCurve Solutions',
+      desc: [
+        'Developing creative web applications using MERN stack and modern tools.',
+        'Building RESTful APIs, integrating third-party services and payment gateways.',
+        'Optimizing application performance and improving user experience.',
+      ]
     },
     {
-      date: '2024',
-      title: 'Web & Mobile App Development Certification (SMIT)',
-      desc: 'Successfully completed a comprehensive full-stack training program at SMIT, gaining robust hands-on expertise in the MERN development stack.'
+      date: '2018 - 2024',
+      role: 'Frontend Developer',
+      company: 'TechCurve Solutions',
+      desc: [
+        'Built responsive and interactive user interfaces using React and Tailwind CSS.',
+        'Collaborated with backend teams to integrate APIs and manage client-side logic.',
+        'Enhanced application usability and performance across devices.',
+      ]
     },
     {
       date: '2023',
-      title: 'Intermediate in Computer Science',
-      desc: 'Acquired a strong foundation in Computer Science principles, algorithmic thinking, and fundamental programming concepts at Govt. Superior College.'
+      role: 'MERN Stack Developer Intern',
+      company: 'TechCurve Solutions',
+      desc: [
+        'Worked on real-world projects using MongoDB, Express.js, React and Node.js.',
+        'Implemented authentication, CRUD operations and API integrations.',
+        'Gained hands-on experience in full-stack development and best practices.',
+      ]
     }
   ];
 
   return (
     <section id="experience" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">Experience & Education</h2>
+        <h2 className="section-title">Experience</h2>
+        <p className="section-subtitle" style={{ textAlign: 'center' }}></p>
         <div className="timeline">
-          {timelineItems.map((item, index) => (
-            <div key={index} className={`timeline-item ${isVisible ? 'visible' : ''}`}>
+          {items.map((item, index) => (
+            <div key={index} className={`timeline-item fade-up ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: `${index * 0.15}s` }}>
+              <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <div className="timeline-date">{item.date}</div>
-                <h3 className="timeline-title">{item.title}</h3>
-                <p className="timeline-desc">{item.desc}</p>
+                <div className="timeline-header">
+                  <div>
+                    <h3 className="timeline-role">{item.role}</h3>
+                    <div className="timeline-company">{item.company}</div>
+                  </div>
+                  <div className="timeline-date">{item.date}</div>
+                </div>
+                <ul className="timeline-desc">
+                  {item.desc.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

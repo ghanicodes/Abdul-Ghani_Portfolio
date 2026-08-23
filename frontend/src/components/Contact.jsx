@@ -47,12 +47,11 @@ const Contact = () => {
     }
   };
 
-  // Toast logic ported to React
   const showNotification = (title, message, type) => {
     const toast = document.createElement('div');
     toast.className = `toast-notification ${type}`;
     const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
-    
+
     toast.innerHTML = `
       <div class="toast-icon"><i class="fas ${icon}"></i></div>
       <div class="toast-content">
@@ -61,10 +60,10 @@ const Contact = () => {
       </div>
       <div class="toast-close"><i class="fas fa-times"></i></div>
     `;
-    
+
     document.body.appendChild(toast);
     setTimeout(() => toast.classList.add('show'), 100);
-    
+
     const hideToast = () => {
       toast.classList.remove('show');
       setTimeout(() => toast.remove(), 400);
@@ -80,38 +79,40 @@ const Contact = () => {
   return (
     <section id="contact" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
-        <div className="contact-container">
-          <div className={`contact-info ${isVisible ? 'visible' : ''}`}>
-            <h3>Let's Talk</h3>
-            <p>I'm available for internships and freelance projects. Feel free to contact me for collaborations or opportunities.</p>
+        <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}>Let's Work Together</h2>
+        <div className={`contact-container fade-up ${isVisible ? 'visible' : ''}`}>
+          <div className="contact-info">
+            <p>I'm open to exciting opportunities, collaborations and challenging projects.</p>
             <ul className="contact-details">
-              <li><i className="fas fa-map-marker-alt"></i><span>Karachi, Pakistan</span></li>
               <li><i className="fas fa-envelope"></i><a href="mailto:abdulghaniag1010@gmail.com">abdulghaniag1010@gmail.com</a></li>
               <li><i className="fas fa-phone"></i><a href="tel:+923181168965">+92 318 1168965</a></li>
+              <li><i className="fas fa-map-marker-alt"></i><span>Karachi, Pakistan</span></li>
             </ul>
-            <div className="social-links">
-              <a href="https://github.com/ghanicodes" className="social-link"><i className="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/abdul-ghani-a645202b9/" className="social-link"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
+            <div className="contact-socials">
+              <a href="https://github.com/ghanicodes" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/abdul-ghani-a645202b9/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
+              <a href="mailto:abdulghaniag1010@gmail.com"><i className="fas fa-envelope"></i></a>
             </div>
           </div>
-          <div className={`contact-form ${isVisible ? 'visible' : ''}`}>
+
+          <div className="contact-form-card">
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <input type="text" id="name" className="form-control" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
+              <div className="form-row">
+                <div className="form-group">
+                  <input type="text" id="name" className="form-control" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
+                </div>
+                <div className="form-group">
+                  <input type="email" id="email" className="form-control" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
+                </div>
               </div>
               <div className="form-group">
-                <input type="email" id="email" className="form-control" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
-              </div>
-              <div className="form-group">
-                <input type="text" id="subject" class="form-control" placeholder="Subject" value={formData.subject} onChange={handleChange} />
+                <input type="text" id="subject" className="form-control" placeholder="Subject" value={formData.subject} onChange={handleChange} />
               </div>
               <div className="form-group">
                 <textarea id="message" className="form-control" placeholder="Your Message" required value={formData.message} onChange={handleChange}></textarea>
               </div>
-              <button type="submit" className="btn" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+              <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : (<>Get In Touch <i className="fas fa-paper-plane"></i></>)}
               </button>
             </form>
           </div>

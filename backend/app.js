@@ -82,6 +82,5 @@ connectDb().then(() => {
     });
 }).catch((error) => {
     console.log("Database connection failed", error);
-    // Don't exit process in case db takes time, but standard is:
     process.exit(1);
 });
