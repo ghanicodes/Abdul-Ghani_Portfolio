@@ -49,14 +49,14 @@ const About = () => {
               <div className="info-icon"><i className="fas fa-calendar-alt"></i></div>
               <div>
                 <div className="info-label">Experience</div>
-                <div className="info-value">2+ Years</div>
+                <div className="info-value">6 Months</div>
               </div>
             </div>
             <div className="info-card">
               <div className="info-icon"><i className="fas fa-code"></i></div>
               <div>
                 <div className="info-label">Specialization</div>
-                <div className="info-value">Full Stack Development</div>
+                <div className="info-value">Backend Development</div>
               </div>
             </div>
             <div className="info-card">
